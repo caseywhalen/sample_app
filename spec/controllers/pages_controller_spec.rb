@@ -9,10 +9,10 @@ render_views
       response.should be_success
     end
     
-    it "should have the right title" do
-      get 'home'
-      response.should have_selector("title", :content => "ruby on Rails Tutorial | Home")
-    end
+    # it "should have the right title" do
+    #   get 'home'
+    #   response.should have_selector("title", :content => "Ruby on Rails Tutorial | Home")
+    # end
   end
 
   describe "GET 'contact'" do
@@ -23,9 +23,9 @@ render_views
     
     # it "should have the right title" do
     #       get 'contact'
-    #       response.should have_selector("title", :content => "ruby on Rails Tutorial | Contact")
+    #       response.should have_selector("title", :content => "Ruby on Rails Tutorial | Contact")
     #     end
-  end
+      end
   
   describe "GET 'about'" do
       it "should be successful" do
@@ -34,9 +34,9 @@ render_views
       end
       
       # it "should have the right title" do
-      #         get 'about'
-      #         response.should have_selector("title", :content => "ruby on Rails Tutorial | About")
-      #       end
-  end
+      #       get 'about'
+      #       response.should have_selector("title", :content => "Ruby on Rails Tutorial | About")
+      #     end
+    end
 
 end
