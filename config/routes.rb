@@ -1,10 +1,21 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   get "pages/home"
   get "pages/contact"
   get "pages/about"
+  get "users/new"
+    
+  match '/contact', :to => "pages#contact"
+  match '/about',   :to => "pages#about"
+  match '/help',    :to => "pages#help"
+  match 'signup/new', :to => "users#new"
+  
+  root :to => 'pages#home'
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
